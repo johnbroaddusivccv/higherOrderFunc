@@ -24,15 +24,43 @@ companies.forEach((company) => {
   console.log(company.name);
 });
 
+// let canDrink = [];
+
+// for (let i = 0; i < ages.length; i++) {
+//   if (ages[i] >= 21) {
+//     canDrink.push(ages[i]);
+//   }
+// }
+
 // Filter
 // Filter allows us to do just that filter things out of the array.
+// canDrink = ages.filter(function(age){
+//   if(age >= 21) {
+//     return true;
+//   }
+// });
 
-let canDrink = [];
-
-for (let i = 0; i < ages.length; i++) {
-  if (ages[i] >= 21) {
-    canDrink.push(ages[i]);
-  }
-}
+// ES6 Arrow function
+const canDrink = ages.filter((age) => age >= 21);
 
 console.log(canDrink);
+
+// filter retail company
+
+const retailCompanies = companies.filter(function (company) {
+  if (company.category === "Retail") {
+    return true;
+  }
+});
+
+console.log(retailCompanies);
+
+// Get companies from the 80's
+
+const eightiesCompanies = companies.filter(
+  (company) => company.start >= 1980 && company.start > 1990
+);
+
+console.log(eightiesCompanies);
+
+// map
