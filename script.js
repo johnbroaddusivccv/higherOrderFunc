@@ -63,4 +63,53 @@ const eightiesCompanies = companies.filter(
 
 console.log(eightiesCompanies);
 
+// Get companies that lasted 10 years or more
+
+const lastedTenYears = companies.filter(
+  (company) => company.end - company.start >= 10
+);
+
+console.log(lastedTenYears);
+
 // map
+// Create array of company names
+
+// const companyNames = companies.map(function (company) {
+//   return company.name;
+// });
+
+// const companyNames = companies.map(function (company) {
+//   return 1;
+// });
+
+const testMap = companies.map(function (company) {
+  return `${company.name} [${company.start} - ${company.end}]`;
+});
+
+console.log(testMap);
+
+// ES5
+var x = function(x, y) {
+  return x * y;
+}
+
+// ES6
+const x = (x, y) => x * y;
+
+var x = 10 
+// Here x is 10
+{
+  let x = 2
+  // Here x is 2 
+}
+// here x is 10
+
+class Car {
+  constructor(name, year) {
+    this.name = name;
+    this.year = year;
+  }
+}
+
+let myCar1 = new Car("Ford", 2014);
+let myCar2 = new Car("Audi", 2019);
